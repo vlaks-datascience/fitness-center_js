@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-size: 14px;
+        }
+
+        .btnRegister {
+            background-color: cadetblue;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+            .btnRegister:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 16px;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .styled-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .styled-table tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+
+                .styled-table tbody tr.active-row {
+                    font-weight: bold;
+                    color: #009879;
+                }
+    </style>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        console.log('CHECKING USER...');
+        $.get("/api/session", function (data) {
+            if (data.Name == null) {
+                alert('Redirecting...');
+                $(location).prop('href', 'home.html');
+            } else if (data.Role == 0) {
+                alert('Redirecting...');
+                $(location).prop('href', 'visitor.html');
+                return;
+            } else if (data.Role == 1) {
+                return;
+            } else if (data.Role == 2) {
+                alert('Redirecting...');
+                $(location).prop('href', 'owner.html');
+            }
+        });
+        $(document).ready(function () {
+            loadRegister();
+            $(document).on('click', '.btnRegister', function () {
+                let name = $('#name').val();
+                let trainingtype = $('#trainingtype').val();
+                let trainingduration = $('#trainingduration').val();
+                let dateandtime = $('#dateandtime').val();
+                let maxvisitors = $('#maxvisitors').val();
+                console.log(name + " " + trainingtype + " " + trainingduration + " " + dateandtime + " " + maxvisitors);
+                if (name == "" || trainingtype == "" || trainingduration == "" || dateandtime == "" || maxvisitors == "") {
+                    alert('No parameters can be left empty!');
+                } else {
+                    // implementacija za proveru iz tabele
+                    $.post('/api/coach', { 'Name': name, 'TrainingType': trainingtype, 'FitnessCenter': null, 'TrainingDuration': trainingduration, 'DateNTime': dateandtime, 'MaxVisitors': maxvisitors, 'VisitorsListing': null },
+                        function (data) {
+                            if (data != null) {
+                                alert('Successfully created!');
+                                console.log('Successfully created gt');
+                                $(location).prop('href', 'coach.html');
+                                window.close();
+                            } else {
+                                //console.log('Already exists');
+                                alert("Cannot create group training!");
+                            }
+                        }
+                    ).error(function (xhr, ajaxOption, throwError) {
+                        alert('Error: ' + xhr.status);
+                    });
+                }
+            });
+            function loadRegister() {
+                console.log('RegisterGT loaded');
+                // tabela za create new gt
+                let tablegtc = '<h2 style="position:absolute; left:110px; top:-60px; font-size: 34px;">Create new GT</h2>'
+                    + '<table class="styled-table">'
+                    + '<tr><td>Name:</td>'
+                    + '<td><input type="text" id="name" name="name"/></td></tr>'
+                    + '<tr><td>Training type:</td>'
+                    + '<td><input type="text" id="trainingtype" name="trainingtype"/></td></tr>'
+                    + '<tr><td>Training duration:</td>'
+                    + '<td><input type="number" id="trainingduration" name="trainingduration"/></td></tr>'
+                    + '<tr><td>Date-Time:</td>'
+                    + '<td><input type="datetime-local" id="dateandtime" name="dateandtime"/></td></tr>'
+                    + '<tr><td>Max Visitors:</td>'
+                    + '<td><input type="number" id="maxvisitors" name="maxvisitors"/></td></tr>'
+                    + '<tr><td></td><td><input type="submit" value="Register" class="btnRegister" id="btnRegister" username="btnRegister" password="btnRegister" name="btnRegister" surname="btnRegister" sex="btnRegister" email="btnRegister" date="btnRegister"/></td></tr></table>';
+                $('#gtcreate').html(tablegtc);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="DIV_REG">
+        <p></p>
+        <div id="gtcreate" style="position:absolute; top:50px; left:700px"></div>
+    </div>
+</body>
+</html>

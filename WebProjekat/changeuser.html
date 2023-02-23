@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-size: 14px;
+        }
+
+        .btnRegister {
+            background-color: cadetblue;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+            .btnRegister:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 16px;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .styled-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .styled-table tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+
+                .styled-table tbody tr.active-row {
+                    font-weight: bold;
+                    color: #009879;
+                }
+    </style>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        let c_role;
+        $(document).ready(function () {
+            console.log('CHECKING USER...');
+            $.get("/api/session", function (data) {
+                if (data.Name == null) {
+                    alert('Redirecting...');
+                    $(location).prop('href', 'home.html');
+                } else {
+                    let c_username;
+                    let c_password
+                    let c_name;
+                    let c_surname;
+                    let c_sex;
+                    let c_email;
+                    c_role = data.Role;
+                    loadChange();
+                }
+            });
+            $(document).on('click', '.btnChange', function () {
+                let username = $('#username').val();
+                let password = $('#password').val();
+                let name = $('#name').val();
+                let surname = $('#surname').val();
+                let sex = $('#sex').val();
+                let email = $('#email').val();
+                console.log(username + " " + password + " " + name + " " + surname + " " + sex + " " + email);
+                if (username == "" || password == "" || name == "" || surname == "" || sex == "" || email == "") {
+                    alert('No parameters can be left empty!');
+                } else {
+                    $.ajax({
+                        url: '/api/users/',
+                        type: 'PUT',
+                        data: { Username: username, Password: password, Name: name, Surname: surname, Sex: sex, Email: email },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result == null) {
+                                alert('Izbacio null bez razloga');
+                            } else if (c_role == 0) {
+                                $(location).prop('href', 'visitor.html');
+                            } else if (c_role == 1) {
+                                $(location).prop('href', 'coach.html');
+                            } else if (c_role == 2) {
+                                $(location).prop('href', 'owner.html');
+                            } else {
+                                alert('Theres been an error');
+                            }
+                        }
+                    });
+                }
+            });
+
+            function loadChange() {
+                $.ajax({
+                    url: '/api/login/',
+                    type: 'GET',
+                    data: {Username: "daj"},
+                    dataType: 'json',
+                    success: function (result) {
+                        c_username = result.Username;
+                        c_password = result.Password;
+                        c_name = result.Name;
+                        c_surname = result.Surname;
+                        c_sex = result.Sex;
+                        c_email = result.Email;
+                        c_date = result.Date;
+                        let tableChg = '<h2 style="position:absolute; left:130px; top:-60px; font-size: 34px;">CHANGE</h2>'
+                            + '<table class="styled-table">'
+                            + '<tr><td>Username:</td>'
+                            + '<td><input disabled type="text" id="username" name="username" value="' + c_username + '"/></td></tr>'
+                            + '<tr><td>Password:</td>'
+                            + '<td><input type="password" id="password" name="password"  value="' + c_password + '"/></td></tr>'
+                            + '<tr><td>Name:</td>'
+                            + '<td><input type="text" id="name" name="name" value="' + c_name + '"/></td></tr>'
+                            + '<tr><td>Surname:</td>'
+                            + '<td><input type="text" id="surname" name="surname"  value="' + c_surname + '"/></td></tr>'
+                            + '<tr><td>Sex:</td>';
+                        if (c_sex == 0) {
+                            tableChg += '<td><select id="sex" name="sex" ><option selected value = "Male">Male</option><option value="Female">Female</option></select></td></tr>';
+                        } else {
+                            tableChg += '<td><select id="sex" name="sex" ><option value = "Male">Male</option><option selected value="Female">Female</option></select></td></tr>';
+                        }
+                        tableChg += '<tr><td>Email:</td>'
+                            + '<td><input type="email" id="email" name="email" value="' + c_email + '"/></td></tr>'
+                            + '<tr><td></td><td><input type="submit" value="Change" class="btnChange" id="btnChange" username="btnChange" password="btnChange" name="btnChange" surname="btnChange" sex="btnRegister" email="btnChange"/></td></tr></table>';
+                        $('#userChg').html(tableChg);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })         
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="DIV_CHG">
+        <p></p>
+        <div id="userChg" style="position:absolute; top:50px; left:700px"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Comments>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Komfortacija je lepa bila.</ReviewVisitorsComment>
+    <ReviewRating>5</ReviewRating>
+    <Accepted>Yes</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Bas mi se svidelo, sve super</ReviewVisitorsComment>
+    <ReviewRating>5</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Tolstojeva 36, Novi Sad, 21000</Address>
+      <Established>2069</Established>
+      <Owner>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Lepo bilo</ReviewVisitorsComment>
+    <ReviewRating>4</ReviewRating>
+    <Accepted>Yes</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Smrdljivi Zabac</Name>
+      <Address>27. Aprila 25, Pozarevac, 12000</Address>
+      <Established>1999</Established>
+      <Owner>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>1000</MonthCost>
+      <YearCost>20000</YearCost>
+      <OneCost>300</OneCost>
+      <OneGroupCost>400</OneGroupCost>
+      <OneWithCoachCost>500</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Nije lepo bilo</ReviewVisitorsComment>
+    <ReviewRating>1</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Kostolac Plaza FC</Name>
+      <Address>Kostolac BB, Kostolac, 12000</Address>
+      <Established>2000</Established>
+      <Owner>
+        <Username>vlaksbato</Username>
+      </Owner>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Onako</ReviewVisitorsComment>
+    <ReviewRating>3</ReviewRating>
+    <Accepted>No</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+      <Sex>Male</Sex>
+      <Date>0001-01-01T00:00:00</Date>
+      <Role>Visitor</Role>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Milka Canic voli ovo mesto</ReviewVisitorsComment>
+    <ReviewRating>5</ReviewRating>
+    <Accepted>Yes</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+      <Sex>Male</Sex>
+      <Date>0001-01-01T00:00:00</Date>
+      <Role>Visitor</Role>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Bas mi se svidja, dosla bih opet</ReviewVisitorsComment>
+    <ReviewRating>4</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+      <Sex>Male</Sex>
+      <Date>0001-01-01T00:00:00</Date>
+      <Role>Visitor</Role>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>SVIDJA MI SE</ReviewVisitorsComment>
+    <ReviewRating>2</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+      <Sex>Male</Sex>
+      <Date>0001-01-01T00:00:00</Date>
+      <Role>Visitor</Role>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>0</Established>
+      <MonthCost>0</MonthCost>
+      <YearCost>0</YearCost>
+      <OneCost>0</OneCost>
+      <OneGroupCost>0</OneGroupCost>
+      <OneWithCoachCost>0</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Supeeer</ReviewVisitorsComment>
+    <ReviewRating>2</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+  <Comment>
+    <ReviewVisitor>
+      <Username>milkacanic</Username>
+      <Sex>Male</Sex>
+      <Date>0001-01-01T00:00:00</Date>
+      <Role>Visitor</Role>
+    </ReviewVisitor>
+    <ReviewFitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>0</Established>
+      <MonthCost>0</MonthCost>
+      <YearCost>0</YearCost>
+      <OneCost>0</OneCost>
+      <OneGroupCost>0</OneGroupCost>
+      <OneWithCoachCost>0</OneWithCoachCost>
+    </ReviewFitnessCenter>
+    <ReviewVisitorsComment>Supeeer</ReviewVisitorsComment>
+    <ReviewRating>2</ReviewRating>
+    <Accepted>WaitingApprove</Accepted>
+  </Comment>
+</Comments>

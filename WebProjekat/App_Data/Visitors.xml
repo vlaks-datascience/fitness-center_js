@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Visitors>
+  <User>
+    <Username>PrviPosetilac</Username>
+    <Password>1234</Password>
+    <Name>Mike</Name>
+    <Surname>Tyson</Surname>
+    <Sex>Male</Sex>
+    <Email>mike@tyson.net</Email>
+    <Date>1970-05-11T00:00:00</Date>
+    <Role>Visitor</Role>
+    <GroupTrainingsVisitor>
+      <GroupTraining />
+    </GroupTrainingsVisitor>
+  </User>
+  <User>
+    <Username>milkacanic</Username>
+    <Password>mcmcmcmc</Password>
+    <Name>Milkica</Name>
+    <Surname>Canic</Surname>
+    <Sex>Female</Sex>
+    <Email>dobroveceee@slagalica.rs</Email>
+    <Date>1914-12-31T00:00:00</Date>
+    <Role>Visitor</Role>
+    <GroupTrainingsVisitor>
+      <GroupTraining>
+        <Name>Tesko-laki grupni</Name>
+        <TrainingType>Less mils tone</TrainingType>
+        <FitnessCenter>
+          <Name>Lekovita Batusa</Name>
+          <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+        </FitnessCenter>
+        <TrainingDuration>60</TrainingDuration>
+        <DateNTime>2022-10-29T15:30:00</DateNTime>
+        <MaxVisitors>100</MaxVisitors>
+        <VisitorsListing>
+          <User>
+            <Usernamee>agonija</Usernamee>
+          </User>
+          <User>
+            <Usernamee>PrviPosetilac</Usernamee>
+          </User>
+        </VisitorsListing>
+      </GroupTraining>
+    </GroupTrainingsVisitor>
+  </User>
+  <User>
+    <Username>agonija</Username>
+    <Password>agonija</Password>
+    <Name>agonija</Name>
+    <Surname>agonija</Surname>
+    <Sex>Male</Sex>
+    <Email>agonija@veb.ftn</Email>
+    <Date>1221-12-15T00:00:00</Date>
+    <Role>Visitor</Role>
+    <GroupTrainingsVisitor>
+      <GroupTraining />
+    </GroupTrainingsVisitor>
+  </User>
+  <User>
+    <Username>guarana</Username>
+    <Password>guarana</Password>
+    <Name>guarana</Name>
+    <Surname>guarana</Surname>
+    <Sex>Male</Sex>
+    <Email>guarana@ads.cs</Email>
+    <Date>1912-12-12T00:00:00</Date>
+    <Role>Visitor</Role>
+    <GroupTrainingsVisitor>
+      <GroupTraining />
+    </GroupTrainingsVisitor>
+  </User>
+  <User>
+    <Username>milosmilakovic</Username>
+    <Password>mmmmmmmm</Password>
+    <Name>Milos</Name>
+    <Surname>Milakovic</Surname>
+    <Sex>Male</Sex>
+    <Email>losmipanda@lol.rs</Email>
+    <Date>1998-05-25T00:00:00</Date>
+    <Role>Visitor</Role>
+    <GroupTrainingsVisitor />
+  </User>
+</Visitors>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Coaches>
+  <User>
+    <Username>slavicatrener</Username>
+    <Password>slavicatrener</Password>
+    <Name>Slavica</Name>
+    <Surname>Turbo</Surname>
+    <Sex>Female</Sex>
+    <Email>slavicaludilo@lgt.com</Email>
+    <Date>1989-05-05T00:00:00</Date>
+    <Role>Coach</Role>
+    <GroupTrainingsCoach>
+      <GroupTraining>
+        <Name>Teskolaki grupni</Name>
+      </GroupTraining>
+      <GroupTraining>
+        <Name>Teski grupni trening</Name>
+      </GroupTraining>
+      <GroupTraining>
+        <Name>Trening za probu</Name>
+      </GroupTraining>
+      <GroupTraining>
+        <Name>Dizanje tengova</Name>
+        <TrainingType>Tengovi</TrainingType>
+        <TrainingDuration>30</TrainingDuration>
+        <DateNTime>2022-12-20T03:15:00</DateNTime>
+        <MaxVisitors>20</MaxVisitors>
+        <VisitorsListing />
+      </GroupTraining>
+    </GroupTrainingsCoach>
+    <FitnessCenterCoach>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Name>vlaksbato</Name>
+      </Owner>
+    </FitnessCenterCoach>
+  </User>
+  <User>
+    <Username>miletrener</Username>
+    <Password>trenermile</Password>
+    <Name>Milosav</Name>
+    <Surname>Rebedzic</Surname>
+    <Sex>Male</Sex>
+    <Email>ludimilosav@gmail.com</Email>
+    <Date>1964-02-04T00:00:00</Date>
+    <Role>Coach</Role>
+    <GroupTrainingsCoach>
+      <GroupTraining>
+        <Name>Trening za probu drugu</Name>
+      </GroupTraining>
+    </GroupTrainingsCoach>
+    <FitnessCenterCoach>
+      <Name>Lekovita Batusa</Name>
+      <Address>Tolstojeva 36, Novi Sad, 21000</Address>
+      <Established>2069</Established>
+      <Owner>
+        <Name>vlaksbato</Name>
+      </Owner>
+    </FitnessCenterCoach>
+  </User>
+</Coaches>

@@ -1,0 +1,951 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: yellowgreen;
+        }
+
+        .btnDetails {
+            background-color: #4CAF50;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnDetails:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnReload {
+            background-color: aquamarine;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnReload:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnModifyConfirm {
+            background-color: aquamarine;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+            .btnModifyConfirm:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+        .btnModify {
+            background-color: aquamarine;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnModify:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnLogout {
+            background-color: aquamarine;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnLogout:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnSearch {
+            background-color: #4CAF50;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnSearch:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnSearchPersonal {
+            background-color: #4CAF50;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnSearchPersonal:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnChange {
+            background-color: cornflowerblue;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnChange:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnTrainingsCreate {
+            background-color: khaki;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnTrainingsCreate:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnTrainings {
+            background-color: thistle;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnTrainings:hover {
+            box-shadow: 0 14px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        console.log('CHECKING USER...');
+        $.get("/api/session", function (data) {
+            if (data.Name == null) {
+                alert('Redirecting...');
+                $(location).prop('href', 'home.html');
+            } else if (data.Role == 0) {
+                alert('Redirecting...');
+                $(location).prop('href', 'visitor.html');
+            } else if (data.Role == 1) {
+                return;
+            } else if (data.Role == 2) {
+                alert('Redirecting...');
+                $(location).prop('href', 'owner.html');
+                return;
+            } else {
+                return;
+            }
+        });
+
+        $(document).ready(function () {
+            setTimeout(function () { loadFCenters(); }, 2000);
+            setTimeout(function () { loadSearch(); }, 2000);
+            setTimeout(function () { loadLogout(); }, 2000);
+            setTimeout(function () { loadChange(); }, 2000);
+            setTimeout(function () { loadTrainings(); }, 2000);
+            setTimeout(function () { loadCreate(); }, 2000);
+
+            $(document).on('click', '.btnReload', function () {
+                loadFCenters();
+            });
+
+            $(document).on('click', '.btnTrainingsCreate', function () {
+                alert('Redirecting...');
+                $(location).prop('href', 'RegisterGT.html');
+            });
+        
+            $(document).on('click', '.btnChange', function () {
+                $(location).prop('href', 'changeuser.html');
+            });
+
+            $(document).on('click', '.btnModifyConfirm', function () {
+                let gtm_namee = $('#nameha').val();
+                alert(gtm_namee);
+                let gtm_trainingtypee = $('#trainingtype').val();
+                alert(gtm_trainingtypee);
+                let gtm_trainingduratione = $('#trainingduration').val();
+                alert(gtm_trainingduratione);
+                let gtm_datentimee = $('#datentime').val();
+                let gtm_maxvisitorse = $('#maxvisitors').val();
+                $.ajax({
+                    url: '/api/gtraining/',
+                    type: 'PUT',
+                    data: { Name: gtm_namee, TrainingType: gtm_trainingtypee, FitnessCenter: null, TrainingDuration: gtm_trainingduratione, DateNTime: gtm_datentimee, MaxVisitors: gtm_maxvisitorse, VisitorsListing: null },
+                    dataType: 'json',
+                    success: function (result) {
+                        if (result == null) {
+                            alert('Cannot change training!');
+                        } else {
+                            alert('Successfully changed!');
+                        }
+                    }
+                });
+            });
+
+            $(document).on('click', '.btnModify', function () {
+                let gtm_name = $(this).attr('m_name');
+                let gtm_trainingtype = $(this).attr('m_trainingtype');
+                //let gtm_fcname = $(this).attr('m_fcname');
+                let gtm_trainingduration = $(this).attr('m_trainingduration');
+                let gtm_datentime = $(this).attr('m_datentime');
+                let gtm_maxvisitors = $(this).attr('m_maxvisitors');
+                $.ajax({
+                    url: '/api/gtraining/',
+                    type: 'GET',
+                    data: { TAJM: gtm_datentime },
+                    dataType: 'json',
+                    success: function (result) {
+                        if (result == "yes") {
+                            alert('Cannot change previous trainings, only future ones!');
+                            return;
+                        } else {
+                            console.log('ModifyGT loading');
+                            let tablegtmo = '<table class="styled-table">'
+                                + '<tr><td>Name:</td>'
+                                + '<td><input disabled type="text" id="nameha" name="nameha" value="' + gtm_name + '" /></td></tr>'
+                                + '<tr><td>Training type:</td>'
+                                + '<td><input type="text" id="trainingtype" name="trainingtype" value="' + gtm_trainingtype + '"/></td></tr>'
+                                + '<tr><td>Training duration:</td>'
+                                + '<td><input type="number" id="trainingduration" name="trainingduration" value="' + gtm_trainingduration + '"/></td></tr>'
+                                + '<tr><td>Date-Time:</td>'
+                                + '<td><input type="datetime-local" id="dateandtime" name="dateandtime" value="' + gtm_datentime + '"/></td></tr>'
+                                + '<tr><td>Max Visitors:</td>'
+                                + '<td><input type="number" id="maxvisitors" name="maxvisitors" value="' + gtm_maxvisitors + '"/></td></tr>'
+                                + '<tr><td></td><td><input type="submit" value="Modify" class="btnModifyConfirm" id="btnModifyConfirm" nameha="btnModifyConfirm" trainingtype="btnModifyConfirm" trainingduration="btnModifyConfirm" dateandtime="btnModifyConfirm" maxvisitors="btnModifyConfirm"/></td></tr></table>';
+                            $('#gtmodifybre').html(tablegtmo);
+                        }
+                    }
+                });
+            });
+
+            $(document).on('click', '.btnLogout', function () {
+                console.log('Logging out');
+                $.get("/api/login", function (data) {
+                    if (data == null) {
+                        alert('Theres been an error! Try again!');
+                        return;
+                    } else {
+                        alert('Successfully logged out! Redirecting...');
+                        window.close();
+                        window.open('home.html');
+                        console.log('Successfully logged out!');
+                        return;
+                    }
+                });
+            });
+
+            $(document).on('click', '.btnSearchPersonal', function () {
+                let gt_name = $('#gtname').val();
+                let gt_type = $('#gttype').val();
+                let gt_min = $('#gtmindate').val();
+                let gt_max = $('#gtmaxdate').val();
+                if (gt_name == "" && gt_type == "" && gt_min == "" && gt_max == "") {
+                    alert('No parameters were entered!');
+                    return;
+                }
+                if (gt_min == "" && gt_max != "") {
+                    alert("Enter Min Date!");
+                    return;
+                }
+                if (gt_min != "" && gt_max == "") {
+                    alert("Enter Max Date!");
+                    return;
+                }
+                if (gt_min == "" && gt_max == "") {
+                    gt_min = "not";
+                    gt_max = "not";
+                }
+                $.ajax({
+                    url: '/api/coach/',
+                    type: 'GET',
+                    data: { Name: gt_name, TrainingType: gt_type, GTmin: gt_min, GTmax: gt_max },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data[0] == undefined) {
+                            alert("No trainings found!");
+                            return;
+                        }
+                        if (data == null) {
+                            alert('Previous group training not found!');
+                            return;
+                        }
+                        let detailsForPREGTS = '<table border="1" class="styled-table" id="load">';
+                        detailsForPREGTS += '<tr><th onclick="sortirajTabeluBre(0)" style="cursor: pointer">Name</th><th onclick="sortirajTabeluBre(1)" style="cursor: pointer">Training Type</th><th onclick="sortirajTabeluBre(2)" style="cursor: pointer">Fitness Center</th><th onclick="sortirajTabeluBre(3)" style="cursor: pointer">Duration</th><th onclick="sortirajTabeluBre(4)" style="cursor: pointer">DateNTime</th><th onclick="sortirajTabeluBre(5)" style="cursor: pointer">Max Visitors</th><th onclick="sortirajTabeluBre(6)" style="cursor: pointer">Visitors</th></tr>';
+                        for (element in data) {
+                            detailsForPREGTS += '<tr><td>' + data[element].Name + '</td>';
+                            detailsForPREGTS += '<td>' + data[element].TrainingType + '</td>';
+                            detailsForPREGTS += '<td>' + data[element].FitnessCenter.Name + '</td>';
+                            detailsForPREGTS += '<td>' + data[element].TrainingDuration + '</td>';
+                            detailsForPREGTS += '<td>' + data[element].DateNTime + '</td>';
+                            detailsForPREGTS += '<td>' + data[element].MaxVisitors + '</td>';
+                            detailsForPREGTS += '<td>';
+                            for (x in data[element].VisitorsListing) {
+                                detailsForPREGTS += data[element].VisitorsListing[x].Username + ", ";
+                            }
+                            detailsForPREGTS += '</td></tr>';
+                        }
+                        detailsForPREGTS += '</table>';
+                        $('#gtcoadetail').html(detailsForPREGTS);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })
+            });
+
+            $(document).on('click', '.btnTrainings', function () {
+                loadSearchForGTS();
+                $.ajax({
+                    url: '/api/coach/',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        let detailsForGTcoa = '<table border="1" class="styled-table" id="load">';
+                        detailsForGTcoa += '<tr><th  onclick="sortirajTabelu2(0)"  style="cursor: pointer">Name</th><th onclick="sortirajTabelu2(1)"  style="cursor: pointer">Training Type</th><th onclick="sortirajTabelu2(2)"  style="cursor: pointer">Fitness Center</th><th onclick="sortirajTabelu2(3)"  style="cursor: pointer">Duration</th><th onclick="sortirajTabelu2(4)"  style="cursor: pointer">DateNTime</th><th onclick="sortirajTabelu2(5)"  style="cursor: pointer">Max Visitors</th><th onclick="sortirajTabelu2(6)"  style="cursor: pointer">Visitors</th><th>Action</th></tr>';
+                        for (element in data) {
+                            detailsForGTcoa += '<tr><td>' + data[element].Name + '</td>';
+                            detailsForGTcoa += '<td>' + data[element].TrainingType + '</td>';
+                            detailsForGTcoa += '<td>' + data[element].FitnessCenter.Name + '</td>';
+                            detailsForGTcoa += '<td>' + data[element].TrainingDuration + '</td>';
+                            detailsForGTcoa += '<td>' + data[element].DateNTime + '</td>';
+                            detailsForGTcoa += '<td>' + data[element].MaxVisitors + '</td>';
+                            detailsForGTcoa += '<td>';
+                            for (x in data[element].VisitorsListing) {
+                                detailsForGTcoa += data[element].VisitorsListing[x].Username + ", ";
+                            }
+                            detailsForGTcoa += '</td>';
+                            detailsForGTcoa += '<td><button class="btnModify" id="btnModify" m_name="' + data[element].Name + '" m_trainingtype="' + data[element].TrainingType + '" m_fcname="' + data[element].FitnessCenter.Name + '" m_trainingduration="' + data[element].TrainingDuration + '" m_datentime="' + data[element].DateNTime + '" m_maxvisitors="' + data[element].MaxVisitors + '" >Modify</button></td>';
+                            detailsForGTcoa += '</tr>';
+                        }
+                        detailsForGTcoa += '</table>';
+                        $('#gtcoadetail').html(detailsForGTcoa);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })
+            });
+
+            // DETAILS
+            $(document).on('click', '.btnDetails', function () {
+                let name = $(this).attr('name');
+                let address = $(this).attr('address');
+                $.ajax({
+                    url: '/api/fcenters/',
+                    type: 'GET',
+                    data: { NameDET: name, AddressDET: address },
+                    dataType: 'json',
+                    success: function (result) {
+                        let detailsForFC = '<table border="1" class="styled-table">';
+                        detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th>Owner</th><th>Month Cost</th><th>Year Cost</th><th>One Cost</th><th>One Group Cost</th><th>One with Coach Cost</th></tr>';
+                        detailsForFC += '<tr><td>' + result.Name + '</td>';
+                        detailsForFC += '<td>' + result.Address + '</td>';
+                        detailsForFC += '<td>' + result.Established + '</td>';
+                        detailsForFC += '<td>' + result.Owner.Username + '</td>';
+                        detailsForFC += '<td>' + result.MonthCost + '</td>';
+                        detailsForFC += '<td>' + result.YearCost + '</td>';
+                        detailsForFC += '<td>' + result.OneCost + '</td>';
+                        detailsForFC += '<td>' + result.OneGroupCost + '</td>';
+                        detailsForFC += '<td>' + result.OneWithCoachCost + '</td></tr>';
+                        detailsForFC += '</table>';
+                        $('#fcdetail').html(detailsForFC);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })
+                //tabela za grupne treninge
+                $.ajax({
+                    url: '/api/gtraining/',
+                    type: 'GET',
+                    dataType: 'json',
+                    data: { Vreme: "provera" },
+                    success: function (data) {
+                        let detailsForGT = '<table border="1" class="styled-table">';
+                        for (element in data) {
+                            if (data[element].FitnessCenter.Address == address && data[element].FitnessCenter.Name == name) {
+                                detailsForGT += '<tr><th>Name</th><th>Training Type</th><th>Fitness Center</th><th>Duration</th><th>DateNTime</th><th>Max Visitors</th><th>Visitors</th></tr>';
+                                detailsForGT += '<tr><td>' + data[element].Name + '</td>';
+                                detailsForGT += '<td>' + data[element].TrainingType + '</td>';
+                                detailsForGT += '<td>' + data[element].FitnessCenter.Name + '</td>';
+                                detailsForGT += '<td>' + data[element].TrainingDuration + '</td>';
+                                detailsForGT += '<td>' + data[element].DateNTime + '</td>';
+                                detailsForGT += '<td>' + data[element].MaxVisitors + '</td>';
+                                detailsForGT += '<td>';
+                                for (x in data[element].VisitorsListing) {
+                                    detailsForGT += data[element].VisitorsListing[x].Username + ", ";
+                                }
+                                detailsForGT += '</td></tr>';
+                            }
+                        }
+                        detailsForGT += '</table>';
+                        $('#gtdetail').html(detailsForGT);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })
+                // tabela za komentare
+                $.ajax({
+                    url: '/api/comments/',
+                    type: 'GET',
+                    data: { Name: name, Address: address },
+                    dataType: 'json',
+                    success: function (Rezultat) {
+                        let detailsForCM = '<table border="1" class="styled-table">';
+                        for (element in Rezultat) {
+                            detailsForCM += '<tr><th colspan ="2">Review</th></tr>';
+                            detailsForCM += '<tr><th>Reviewer</th><td>' + Rezultat[element].ReviewVisitor.Username + '</td></tr>';
+                            detailsForCM += '<tr><th>Fitness Center</th><td>' + Rezultat[element].ReviewFitnessCenter.Name + '</td></tr>';
+                            detailsForCM += '<tr><th>Comment</th><td>' + Rezultat[element].ReviewVisitorsComment + '</td></tr>';
+                            detailsForCM += '<tr><th>Rating</th><td>' + Rezultat[element].ReviewRating + '</td></tr>';
+                        }
+                        detailsForCM += '</table>';
+                        $('#cmdetail').html(detailsForCM);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Error: ' + xhr.status);
+                    }
+                })
+            });
+
+            // SEARCH
+            $(document).on('click', '.btnSearch', function () {
+                let s_name = $('#name').val();
+                let s_address = $('#address').val();
+                let s_established = $('#established').val();
+                // SVE PRAZNO
+                if (s_name == "" && s_address == "" && s_established.toString() == "") {
+                    alert('Search parameters cannot be empty!');
+                    return;
+                    // SVE POPUNJENO
+                } else if (s_name != "" && s_address != "" && s_established.toString() != "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Name: s_name, Address: s_address, Established: s_established },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td><button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO GODINA UNETA
+                } else if (s_name == "" && s_address == "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Established: s_established },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td><button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO ADRESA UNETA
+                } else if (s_name == "" && s_established.toString() == "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Address: s_address },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td> <button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO IME UNETO
+                } else if (s_address == "" && s_established.toString() == "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Name: s_name },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td> <button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO GODINA NIJE UNETA
+                } else if (s_name != "" && s_address != "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Name: s_name, Address: s_address },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td><button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO ADRESA NIJE UNETA
+                } else if (s_name != "" && s_established.toString() != "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Name: s_name, Established: s_established },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td> <button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                    // SAMO IME NIJE UNETO
+                } else if (s_address != "" && s_established.toString() != "") {
+                    $.ajax({
+                        url: '/api/fcenters/',
+                        type: 'GET',
+                        data: { Address: s_address, Established: s_established },
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result[0] == undefined) {
+                                alert('No results found!');
+                                return;
+                            }
+                            let detailsForFC = '<table border="1" class="styled-table">';
+                            detailsForFC += '<tr><th>Name</th><th>Address</th><th>Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                            for (element in result) {
+                                detailsForFC += '<tr><td>' + result[element].Name + '</td>';
+                                detailsForFC += '<td>' + result[element].Address + '</td>';
+                                detailsForFC += '<td>' + result[element].Established + '</td>';
+                                detailsForFC += '<td><button class="btnDetails" name="' + result[element].Name + '" address="' + result[element].Address + '">Details</button></td></tr>';
+                            }
+                            detailsForFC += '</table>';
+                            $('#fccontent').html(detailsForFC);
+                            console.log('fitness centers_search loaded!');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert('Error: ' + xhr.status);
+                        }
+                    })
+                } else {
+                    alert('ERROR');
+                    return;
+                }
+            });
+
+
+            function loadLogout() {
+                console.log('Logout button loaded');
+                // dugme za Logout
+                let tableReg = '<h2 style=" font-size: 34px;">Logout</h2><input type="submit" value="LOGOUT" class="btnLogout" id="btnLogout"/>'; //</td></tr></table>
+                $('#dlogout').html(tableReg);
+            }
+
+            function loadChange() {
+                console.log('Change button loaded');
+                // tabela za Change
+                let tableChg = '<h2 style=" font-size: 34px;">Change user</h2><input type="submit" value="CHANGE" class="btnChange" id="btnChange"/>';
+                $('#dChange').html(tableChg);
+            }
+
+            function loadTrainings() {
+                console.log('Trainings button loaded');
+                // tabela za Trainings
+                let tableTra = '<h2 style=" font-size: 34px;">Trainings</h2><input type="submit" value="TRAININGS" class="btnTrainings" id="btnTrainings"/>';
+                $('#dtraini').html(tableTra);
+            }
+
+            function loadCreate() {
+                console.log('GTCreate button loaded');
+                // dugme za Create
+                let tableCre = '<h2 style=" font-size: 34px;">Create</h2><input type="submit" value="CREATE" class="btnTrainingsCreate" id="btnTrainingsCreate"/>';
+                $('#dcreate').html(tableCre);
+            }
+
+            function loadSearchForGTS() {
+                console.log('gtsearchprevious loaded');
+                // tabela za search
+                let tablescpre = '<h2 style="position:absolute; left:85px; top: -40px">Search Personal Trainings</h2>'
+                    + '<table class="styled-table"><tr>'
+                    + '<td>Name:</td>'
+                    + '<td><input type="text" id="gtname" name="gtname" /></td></tr>'
+                    + '<tr><td>Training Type:</td>'
+                    + '<td><input type="text" id="gttype" name="gttype" /></td>'
+                    + '</tr>'
+                    + '<tr><td>Min Date:</td>'
+                    + '<td><input type="date" id="gtmindate" name="gtmindate"/></td></tr>'
+                    + '<tr><td>Max Date:</td>'
+                    + '<td><input type="date" id="gtmaxdate" name="gtmaxdate"/></td></tr>'
+                    + '<tr><td></td>'
+                    + '<td>'
+                    + '<input type ="submit" value="Search" class="btnSearchPersonal" id="btnSearchPersonal" gtname="btnSearchPersonal" gttype="btnSearchPersonal" gtmindate="btnSearchPersonal" gtmaxdate="btnSearchPersonal"/></td></tr></table>';
+                $('#gtpresearch').html(tablescpre);
+            }
+
+
+            // tabela za loadovanje fitnes centara
+            function loadFCenters() {
+                console.log('fitness centers loading...');
+                $.get("/api/fcenters", function (data, status) {
+                    let table = '<h1 style="position:absolute; left:160px; top:-80px;">All Fitness Centers</h1>';
+                    table += '<table class="styled-table" border="1" id="loads">';
+                    table += '<tr><th onclick="sortirajTabelu(0)"  style="cursor: pointer">Name</th><th onclick="sortirajTabelu(1)"  style="cursor: pointer">Address</th><th onclick="sortirajTabelu(2)"  style="cursor: pointer">Established</th><th><button id="btnReload" class="btnReload">Reload</button></th></tr>';
+                    for (element in data) {
+                        let fcenter = '<td>' + data[element].Name + '</td>';
+                        fcenter += '<td>' + data[element].Address + '</td>';
+                        fcenter += '<td>' + data[element].Established + '</td>';
+                        fcenter += '<td> <button class="btnDetails" name="' + data[element].Name + '" address="' + data[element].Address + '">Details</button></td>';
+                        table += '<tr>' + fcenter + '</tr>';
+                    }
+                    table += '</table>';
+                    $('#fccontent').html(table);
+                    console.log('fitness centers loaded!');
+                });
+            }
+
+            function loadSearch() {
+                console.log('fcsearch loaded');
+                // tabela za search
+                let tablesc = '<h2 style="position:absolute; left:85px; top: -40px">Search Fitness Centers</h2>'
+                    + '<table class="styled-table"><tr>'
+                    + '<td>Name:</td>'
+                    + '<td><input type="text" id="name" name="name" /></td></tr>'
+                    + '<tr><td>Address:</td>'
+                    + '<td><input type="text" id="address" name="address" /></td>'
+                    + '</tr><tr><td>Established:</td>'
+                    + '<td><input type="number" id="established" name="established"  max="2024" min="1998"/></td></tr>'
+                    + '<tr><td></td>'
+                    + '<td>'
+                    + '<input type ="submit" value="Search" class="btnSearch" id="btnSearch" name="btnSearch" address="btnSearch" established="btnSearch"/></td></tr></table>';
+                $('#fcsearch').html(tablesc);
+            }
+        });
+        function sortirajTabelu2(n) {
+            var tabela, red, menjaj, i, x, y, provera, smer, izmenj = 0;
+            tabela = document.getElementById("load");
+            menjaj = true;
+            smer = "asc";
+            while (menjaj) {
+                menjaj = false;
+                red = tabela.rows;
+                for (i = 1; i < (red.length - 1); i++) {
+                    provera = false;
+                    x = red[i].getElementsByTagName("TD")[n];
+                    y = red[i + 1].getElementsByTagName("TD")[n];
+                    if (smer == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            provera = true;
+                            break;
+                        }
+                    } else if (smer == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            provera = true;
+                            break;
+                        }
+                    }
+                }
+                if (provera) {
+                    red[i].parentNode.insertBefore(red[i + 1], red[i]);
+                    menjaj = true;
+                    izmenj++;
+                } else {
+                    if (izmenj == 0 && smer == "asc") {
+                        smer = "desc";
+                        menjaj = true;
+                    }
+                }
+            }
+        }
+
+        function sortirajTabelu(n) {
+            var tabela, red, menjaj, i, x, y, provera, smer, izmenj = 0;
+            tabela = document.getElementById("loads");
+            menjaj = true;
+            smer = "asc";
+            while (menjaj) {
+                menjaj = false;
+                red = tabela.rows;
+                for (i = 1; i < (red.length - 1); i++) {
+                    provera = false;
+                    x = red[i].getElementsByTagName("TD")[n];
+                    y = red[i + 1].getElementsByTagName("TD")[n];
+                    if (smer == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            provera = true;
+                            break;
+                        }
+                    } else if (smer == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            provera = true;
+                            break;
+                        }
+                    }
+                }
+                if (provera) {
+                    red[i].parentNode.insertBefore(red[i + 1], red[i]);
+                    menjaj = true;
+                    izmenj++;
+                } else {
+                    if (izmenj == 0 && smer == "asc") {
+                        smer = "desc";
+                        menjaj = true;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="DIV_START">
+        <div id="fccontent" style="position:absolute; left:9px; top:90px;"></div>
+        <p></p>
+        <div id="fcdetail" style="position:absolute; top:300px; left:625px;"></div>
+        <p></p>
+        <div id="gtdetail" style="position:absolute; top:410px; left:625px;"></div>
+        <p></p>
+        <div id="cmdetail" style="position:absolute; top:650px; left:425px;"></div>
+        <p></p>
+        <div id="fcsearch" style="position:absolute; top:650px;"></div>
+        <p></p>
+        <div id="dlogout" style="position:absolute; top:20px; left:1530px;"></div>
+        <p></p>
+        <div id="dChange" style="position:absolute; top:20px; left:1680px;"></div>
+        <p></p>
+        <div id="gtcoadetail" style="position:absolute; top:650px; left:840px;"></div>
+        <p></p>
+        <div id="dtraini" style="position:absolute; top:20px; left:1365px;"></div>
+        <p></p>
+        <div id="dcreate" style="position:absolute; top:20px; left:1215px;"></div>
+        <p></p>
+        <div id="gtpresearch" style="position:absolute; top:20px; left:625px;"></div>
+        <p></p>
+        <div id="gtmodifybre" style="position:absolute; top:1000px; left:700px;"></div>
+    </div>
+</body>
+</html>

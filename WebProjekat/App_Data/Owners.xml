@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Owners>
+  <User>
+    <Username>vlaksbato</Username>
+    <Password>qa72pqbkb</Password>
+    <Name>Vladimir</Name>
+    <Surname>Petrovic</Surname>
+    <Sex>Male</Sex>
+    <Email>vladimir.petrovic@gmail.com</Email>
+    <Date>1999-09-25T00:00:00</Date>
+    <Role>Owner</Role>
+    <FitnessCenterOwner>
+      <FitnessCenter>
+        <Name>Lekovita Batusa</Name>
+        <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+        <Established>2022</Established>
+        <Owner>
+          <Vlasnik>vlaksbato</Vlasnik>
+        </Owner>
+        <MonthCost>5000</MonthCost>
+        <YearCost>40000</YearCost>
+        <OneCost>500</OneCost>
+        <OneGroupCost>600</OneGroupCost>
+        <OneWithCoachCost>1000</OneWithCoachCost>
+      </FitnessCenter>
+      <FitnessCenter>
+        <Name>Lekovita Batusa</Name>
+        <Address>Tolstojeva 36, Novi Sad, 21000</Address>
+        <Established>2069</Established>
+        <Owner>
+          <Vlasnik>vlaksbato</Vlasnik>
+        </Owner>
+        <MonthCost>5000</MonthCost>
+        <YearCost>40000</YearCost>
+        <OneCost>500</OneCost>
+        <OneGroupCost>600</OneGroupCost>
+        <OneWithCoachCost>1000</OneWithCoachCost>
+      </FitnessCenter>
+      <FitnessCenter>
+        <Name>Smrdljivi Zabac</Name>
+        <Address>27. Aprila 25, Pozarevac, 12000</Address>
+        <Established>1999</Established>
+        <Owner>
+          <Vlasnik>vlaksbato</Vlasnik>
+        </Owner>
+        <MonthCost>1000</MonthCost>
+        <YearCost>20000</YearCost>
+        <OneCost>300</OneCost>
+        <OneGroupCost>400</OneGroupCost>
+        <OneWithCoachCost>500</OneWithCoachCost>
+      </FitnessCenter>
+      <FitnessCenter>
+        <Name>Kostolac Plaza FC</Name>
+        <Address>Kostolac BB, Kostolac, 12000</Address>
+        <Established>2000</Established>
+        <Owner>
+          <Vlasnik>vlaksbato</Vlasnik>
+        </Owner>
+        <MonthCost>100</MonthCost>
+        <YearCost>2000</YearCost>
+        <OneCost>30</OneCost>
+        <OneGroupCost>40</OneGroupCost>
+        <OneWithCoachCost>50</OneWithCoachCost>
+      </FitnessCenter>
+      <FitnessCenter>
+        <Name>Promenada</Name>
+        <Address>Ratarska 96, Pozarevac, 12000</Address>
+        <Established>2019</Established>
+        <Owner>
+          <Vlasnik>vlaksbato</Vlasnik>
+        </Owner>
+        <MonthCost>10000</MonthCost>
+        <YearCost>200000</YearCost>
+        <OneCost>3000</OneCost>
+        <OneGroupCost>4000</OneGroupCost>
+        <OneWithCoachCost>5000</OneWithCoachCost>
+      </FitnessCenter>
+    </FitnessCenterOwner>
+  </User>
+  <User>
+    <Username>admin</Username>
+    <Password>admin</Password>
+    <Name>ADMINN</Name>
+    <Surname>ADMINS</Surname>
+    <Sex>Female</Sex>
+    <Email>admin@gmail.com</Email>
+    <Date>2000-12-31T00:00:00</Date>
+    <Role>Owner</Role>
+    <FitnessCenterOwner>
+    </FitnessCenterOwner>
+  </User>
+</Owners>

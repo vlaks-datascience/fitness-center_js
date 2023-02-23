@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-size: 14px;
+        }
+
+        .btnRegister {
+            background-color: cadetblue;
+            border: 1px #4CAF50;
+            border-width: 2px;
+            color: black;
+            padding: 10px 24px;
+            text-align: center;
+
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+            .btnRegister:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 16px;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .styled-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .styled-table tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+
+                .styled-table tbody tr.active-row {
+                    font-weight: bold;
+                    color: #009879;
+                }
+    </style>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        console.log('CHECKING USER...');
+        $.get("/api/session", function (data) {
+            if (data.Name == null) {
+                return;
+            } else if (data.Role == 0) {
+                alert('Redirecting...');
+                $(location).prop('href', 'posetila.html');
+            } else if (data.Role == 1) {
+                alert('Redirecting...');
+                $(location).prop('href', 'trener.html');
+            } else if (data.Role == 2) {
+                alert('Redirecting...');
+                $(location).prop('href', 'vlasni.html');
+                return;
+            }
+        });
+        $(document).ready(function () {
+            loadRegister();
+            $(document).on('click', '.btnRegister', function () {
+                let username = $('#username').val();
+                let password = $('#password').val();
+                let name = $('#name').val();
+                let surname = $('#surname').val();
+                let sex = $('#sex').val();
+                let email = $('#email').val();
+                let date = $('#date').val();
+                console.log(username + " " + password + " " + name + " " + surname + " " + sex + " " + email + " " + date);
+                if (username == "" || password == "" || name == "" || surname == "" || sex == "" || email == "" || date == "") {
+                    alert('No parameters can be left empty!');
+                } else {
+                    // implementacija za proveru iz tabele
+                    $.post('/api/users', { 'username': username, 'password': password, 'name': name, 'surname': surname, 'sex': sex, 'email': email, 'date': date },
+                        function (data) {
+                            if (data != null) {
+                                alert('Successfully registered!');
+                                console.log('Successfully registered');
+                                window.close();
+                            } else {
+                                console.log('Already exists');
+                                alert("User with that username already exist!");
+                            }
+                        }
+                    ).error(function (xhr, ajaxOption, throwError) {
+                        alert('Error: ' + xhr.status);
+                    });
+                }
+            });
+            function loadRegister() {
+                console.log('Register loaded');
+                // tabela za Login
+                let tableReg = '<h2 style="position:absolute; left:130px; top:-60px; font-size: 34px;">Register</h2>'
+                    + '<table class="styled-table">'
+                    + '<tr><td>Username:</td>'
+                    + '<td><input type="text" id="username" name="username"/></td></tr>'
+                    + '<tr><td>Password:</td>'
+                    + '<td><input type="password" id="password" name="password"/></td></tr>'
+                    + '<tr><td>Name:</td>'
+                    + '<td><input type="text" id="name" name="name"/></td></tr>'
+                    + '<tr><td>Surname:</td>'
+                    + '<td><input type="text" id="surname" name="surname"/></td></tr>'
+                    + '<tr><td>Sex:</td>'
+                    + '<td><select id="sex" name="sex"><option value = "Male">Male</option><option value="Female">Female</option></select></td></tr>'
+                    + '<tr><td>Email:</td>'
+                    + '<td><input type="email" id="email" name="email"/></td></tr>'
+                    + '<tr><td>Date of Birth:</td>'
+                    + '<td><input type="date" id="date" name="date" max="2004-12-31" min="1920-12-31"/></td></tr>'
+                    + '<tr><td></td><td><input type="submit" value="Register" class="btnRegister" id="btnRegister" username="btnRegister" password="btnRegister" name="btnRegister" surname="btnRegister" sex="btnRegister" email="btnRegister" date="btnRegister"/></td></tr></table>';
+                $('#userReg').html(tableReg);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="DIV_REG">
+        <p></p>
+        <div id="userReg" style="position:absolute; top:50px; left:700px"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GroupTrainings>
+  <GroupTraining>
+    <Name>Teskolaki grupni</Name>
+    <TrainingType>Less mils tone</TrainingType>
+    <FitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Name>Vlaksy</Name>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </FitnessCenter>
+    <TrainingDuration>100</TrainingDuration>
+    <DateNTime>2022-10-29T15:30:00</DateNTime>
+    <MaxVisitors>50</MaxVisitors>
+    <VisitorsListing>
+      <User>
+        <Username>agonija</Username>
+        <Password>agonija</Password>
+        <Name>agonija</Name>
+        <Surname>agonija</Surname>
+        <Sex>Male</Sex>
+        <Email>agonija@veb.ftn</Email>
+        <Date>1221-12-15T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+      <User>
+        <Username>PrviPosetilac</Username>
+        <Password>1234</Password>
+        <Name>Mike</Name>
+        <Surname>Tyson</Surname>
+        <Sex>Male</Sex>
+        <Email>mike@tyson.net</Email>
+        <Date>1970-05-11T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+      <User>
+        <Username>milkacanic</Username>
+        <Password>mcmcmcmc</Password>
+        <Name>Milkica</Name>
+        <Surname>Canic</Surname>
+        <Sex>Female</Sex>
+        <Email>dobroveceee@slagalica.rs</Email>
+        <Date>1914-12-31T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+    </VisitorsListing>
+  </GroupTraining>
+  <GroupTraining>
+    <Name>Teski grupni trening</Name>
+    <TrainingType>Yoga</TrainingType>
+    <FitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Name>Vlaksy</Name>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </FitnessCenter>
+    <TrainingDuration>60</TrainingDuration>
+    <DateNTime>2023-08-19T17:30:00</DateNTime>
+    <MaxVisitors>100</MaxVisitors>
+    <VisitorsListing>
+      <User>
+        <Username>agonija</Username>
+        <Password>agonija</Password>
+        <Name>agonija</Name>
+        <Surname>agonija</Surname>
+        <Sex>Male</Sex>
+        <Email>agonija@veb.ftn</Email>
+        <Date>1221-12-15T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+    </VisitorsListing>
+  </GroupTraining>
+  <GroupTraining>
+    <Name>Trening za probu</Name>
+    <TrainingType>Mozdane celije</TrainingType>
+    <FitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Gogoljeva 36, Novi Sad, 21000</Address>
+      <Established>2022</Established>
+      <Owner>
+        <Name>Vlaksy</Name>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </FitnessCenter>
+    <TrainingDuration>60</TrainingDuration>
+    <DateNTime>2019-02-15T11:00:00</DateNTime>
+    <MaxVisitors>100</MaxVisitors>
+    <VisitorsListing>
+      <User>
+        <Username>agonija</Username>
+        <Password>agonija</Password>
+        <Name>agonija</Name>
+        <Surname>agonija</Surname>
+        <Sex>Male</Sex>
+        <Email>agonija@veb.ftn</Email>
+        <Date>1221-12-15T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+      <User>
+        <Username>PrviPosetilac</Username>
+        <Password>1234</Password>
+        <Name>Mike</Name>
+        <Surname>Tyson</Surname>
+        <Sex>Male</Sex>
+        <Email>mike@tyson.net</Email>
+        <Date>1970-05-11T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+      <User>
+        <Username>milkacanic</Username>
+        <Password>mcmcmcmc</Password>
+        <Name>Milkica</Name>
+        <Surname>Canic</Surname>
+        <Sex>Female</Sex>
+        <Email>dobroveceee@slagalica.rs</Email>
+        <Date>1914-12-31T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+    </VisitorsListing>
+  </GroupTraining>
+  <GroupTraining>
+    <Name>Trening za probu drugu</Name>
+    <TrainingType>Tenis sa gumenim lopticama</TrainingType>
+    <FitnessCenter>
+      <Name>Lekovita Batusa</Name>
+      <Address>Tolstojeva 36, Novi Sad, 21000</Address>
+      <Established>2069</Established>
+      <Owner>
+        <Name>Vlaksy</Name>
+        <Username>vlaksbato</Username>
+      </Owner>
+      <MonthCost>5000</MonthCost>
+      <YearCost>40000</YearCost>
+      <OneCost>500</OneCost>
+      <OneGroupCost>600</OneGroupCost>
+      <OneWithCoachCost>1000</OneWithCoachCost>
+    </FitnessCenter>
+    <TrainingDuration>60</TrainingDuration>
+    <DateNTime>2005-05-05T08:00:00</DateNTime>
+    <MaxVisitors>100</MaxVisitors>
+    <VisitorsListing>
+      <User>
+        <Username>agonija</Username>
+        <Password>agonija</Password>
+        <Name>agonija</Name>
+        <Surname>agonija</Surname>
+        <Sex>Male</Sex>
+        <Email>agonija@veb.ftn</Email>
+        <Date>1221-12-15T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+      <User>
+        <Username>milkacanic</Username>
+        <Password>mcmcmcmc</Password>
+        <Name>Milkica</Name>
+        <Surname>Canic</Surname>
+        <Sex>Female</Sex>
+        <Email>dobroveceee@slagalica.rs</Email>
+        <Date>1914-12-31T00:00:00</Date>
+        <Role>Visitor</Role>
+        <GroupTrainingsVisitor />
+      </User>
+    </VisitorsListing>
+  </GroupTraining>
+  <GroupTraining>
+    <Name>Dizanje tengova</Name>
+    <TrainingType>Tengovi</TrainingType>
+    <TrainingDuration>30</TrainingDuration>
+    <DateNTime>2022-12-20T03:15:00</DateNTime>
+    <MaxVisitors>20</MaxVisitors>
+    <VisitorsListing />
+  </GroupTraining>
+</GroupTrainings>
